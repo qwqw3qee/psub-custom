@@ -2947,7 +2947,7 @@ var src_default = {
       return new Response(optionsJson, {
         status: 200,
         headers: {
-          'Content-Type': 'text/json',
+          'Content-Type': 'application/json',
         },
       });
     } else if (pathSegments[0] === subDir) {
