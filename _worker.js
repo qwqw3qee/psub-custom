@@ -2947,7 +2947,9 @@ var src_default = {
       return new Response(optionsJson, {
         status: 200,
         headers: {
-          'Content-Type': 'text/plain',
+          'Content-Type': 'application/json; charset=utf-8',
+          'Access-Control-Allow-Origin': '*',
+          'cross-origin-resource-policy': 'cross-origin'
         },
       });
     } else if (pathSegments[0] === subDir) {
