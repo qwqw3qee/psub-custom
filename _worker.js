@@ -2918,10 +2918,12 @@ var src_default = {
   async fetch(request, env) {
     const url = new URL(request.url);
     const host = url.origin;
-    const frontendUrl = 'https://raw.githubusercontent.com/bulianglin/psub/main/frontend.html';
+    const frontendUrl = 'https://raw.githubusercontent.com/qwqw3qee/psub-custom/main/frontend.html';
+    const frontendOptionsUrl = 'https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/FrontendJson/opions.json';
     const SUB_BUCKET = env.SUB_BUCKET;
     let backend = env.BACKEND.replace(/(https?:\/\/[^/]+).*$/, "$1");
     const subDir = "subscription";
+    const frontendOptions = "options.json";
     const pathSegments = url.pathname.split("/").filter((segment) => segment.length > 0);
     if (pathSegments.length === 0) {
       const response = await fetch(frontendUrl);
@@ -2934,6 +2936,18 @@ var src_default = {
         status: 200,
         headers: {
           'Content-Type': 'text/html',
+        },
+      });
+    } else if(pathSegments[0] === frontendOptions){
+      const response = await fetch(frontendOptionsUrl);
+      if (response.status !== 200) {
+        return new Response('Failed to fetch frontend options', { status: response.status });
+      }
+      const optionsJson = await response.text();
+      return new Response(optionsJson, {
+        status: 200,
+        headers: {
+          'Content-Type': 'text/json',
         },
       });
     } else if (pathSegments[0] === subDir) {
