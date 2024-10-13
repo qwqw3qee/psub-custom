@@ -2918,8 +2918,8 @@ var src_default = {
   async fetch(request, env) {
     const url = new URL(request.url);
     const host = url.origin;
-    const frontendUrl = 'https://raw.githubusercontent.com/qwqw3qee/psub-custom/main/frontend.html';
-    const frontendOptionsUrl = 'https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/FrontendJson/opions.json';
+    const frontendUrl = 'https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/Frontend/index.html';
+    const frontendOptionsUrl = 'https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/Frontend/opions.json';
     const SUB_BUCKET = env.SUB_BUCKET;
     let backend = env.BACKEND.replace(/(https?:\/\/[^/]+).*$/, "$1");
     const subDir = "subscription";
