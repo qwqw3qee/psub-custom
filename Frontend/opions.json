@@ -15,11 +15,11 @@
             "options": [
                 {
                     "label": "ACL4SSR_Online_AdblockPlus_with_CDN 带CDN分组",
-                    "value": "https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/clash/ACL4SSR_Online_AdblockPlus_with_CDN.ini"
+                    "value": "https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/Clash/ACL4SSR_Online_AdblockPlus_with_CDN.ini"
                 },
                 {
                     "label": "ACL4SSR_Online_AdblockPlus_with_CDN_NoAuto 带CDN分组无自动测速",
-                    "value": "https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/clash/ACL4SSR_Online_AdblockPlus_with_CDN_NoAuto.ini"
+                    "value": "https://raw.githubusercontent.com/qwqw3qee/psub-custom/config/Clash/ACL4SSR_Online_AdblockPlus_with_CDN_NoAuto.ini"
                 }
             ]
         },
